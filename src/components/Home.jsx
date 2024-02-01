@@ -12,10 +12,10 @@ const Home = () => {
     const checkoutHandler = async (amount) => {
         console.log({ amount });
 
-        const { data: { key } } = await axios.get('http://localhost:4000/api/getkey');
+        const { data: { key } } = await axios.get('https://razorpay-backend-eta.vercel.app/api/getkey');
 
         const { data: { order } } = await axios.post(
-            'http://localhost:4000/api/checkout',
+            'https://razorpay-backend-eta.vercel.app/api/checkout',
             { amount }
         )
 
@@ -27,7 +27,7 @@ const Home = () => {
             description: "Test Transaction",
             image: "https://avatars.githubusercontent.com/u/87107956?v=4",
             order_id: order.id,
-            callback_url: "http://localhost:4000/api/paymentverification",
+            callback_url: "https://razorpay-backend-eta.vercel.app/api/paymentverification",
             prefill: {
                 name: "Gaurav Kumar",
                 email: "gaurav.kumar@example.com",
