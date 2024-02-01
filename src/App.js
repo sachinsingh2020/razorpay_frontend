@@ -8,12 +8,18 @@ const App = () => {
 
 
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/paymentsuccess" element={<PaymentSuccess />} />
-      </Routes>
-    </Router>
+    <div
+      style={{
+        background: "#015898"
+      }}
+    >
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/paymentsuccess" element={<PaymentSuccess />} />
+        </Routes>
+      </Router>
+    </div >
   )
 }
 

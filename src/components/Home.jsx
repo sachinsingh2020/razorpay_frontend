@@ -1,10 +1,8 @@
 import { Box, Stack } from '@chakra-ui/react'
 import React from 'react'
-import ram from "../assets/ram_pic.jpg";
-import bhaiya from "../assets/bhaiya.jpg";
-import ashutosh from "../assets/ashutosh_pic.jpg";
 import Card from './Card';
 import axios from 'axios';
+import { ram, prachi, siddhu, bhaiya, ashutosh } from "../extractor/extractor"
 
 
 const Home = () => {
@@ -48,14 +46,20 @@ const Home = () => {
 
     return (
         <Box
-            m={"2rem 4rem"}
+            p={"2rem 4rem"}
+            display={'flex'}
+            justifyContent={'center'}
         >
             <Stack
                 direction={['column', 'row']}
                 alignItems={'center'}
                 justifyContent={'center'}
+                flexWrap={'wrap'}
+                width={['100%', '80%']}
             >
-                <Card amount={5000} image={ram} productName={"Ram Kumar"} checkoutHandler={checkoutHandler} />
+                <Card amount={10000} image={ram} productName={"Ram Kumar"} checkoutHandler={checkoutHandler} />
+                <Card amount={5000} image={siddhu} productName={"Sudhanshu Vikram"} checkoutHandler={checkoutHandler} />
+                <Card amount={500} image={prachi} productName={"Prachi Dev"} checkoutHandler={checkoutHandler} />
                 <Card amount={3000} image={ashutosh} productName={"Ashutosh Kumar"} checkoutHandler={checkoutHandler} />
                 <Card amount={1000} image={bhaiya} productName={"Himanshu Singh"} checkoutHandler={checkoutHandler} />
             </Stack>

@@ -12,6 +12,7 @@ const Card = ({ amount, image, productName, checkoutHandler }) => {
             border={'2px solid black'}
             borderRadius={'10px'}
             m={'0 1rem'}
+            bg={'white'}
         >
             <Image
                 boxSize={['300px', '200px']}
